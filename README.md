@@ -11,10 +11,6 @@ Una web sencilla y visual que muestra una cuenta atrás configurada, pensada par
 - **Persistencia de los datos en localStorage (inputs recuerdan su valor aunque recargues la página)**
 - **Notificación automática cuando quedan menos de 5 días**
 
-## 🖼️ Vista previa
-
-![Vista previa del contador web](cambia-por-tu-imagen.png)
-
 ## 🚀 Uso
 
 1. **Clona este repositorio** o descarga los archivos.
