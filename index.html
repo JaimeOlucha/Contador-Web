@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="page-title">AYUDA ALQUILER</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <label for="tituloInput" class="campo-label">Título de la página:</label>
+        <input type="text" id="tituloInput" maxlength="50" />
+
+        <label for="nombreInput" class="campo-label">Nombre:</label>
+        <input type="text" id="nombreInput" maxlength="30" />
+
+        <label for="fechaInput" class="campo-label">Selecciona fecha límite:</label>
+        <input type="datetime-local" id="fechaInput" />
+
+        <!-- Contenedor principal con recuadro -->
+        <div id="contenidoPrincipal">
+            <h2 id="tituloHeader">AYUDA ALQUILER</h2>
+            <h1 id="mensaje"><span id="nombreSpan">Clara</span>, te queda:</h1>
+
+            <div id="contador" aria-live="polite" aria-atomic="true">
+                <div class="tiempo-seccion">
+                    <span class="valor" id="dias">--</span>
+                    <span class="etiqueta">Días</span>
+                </div>
+                <div class="tiempo-seccion">
+                    <span class="valor" id="horas">--</span>
+                    <span class="etiqueta">Horas</span>
+                </div>
+                <div class="tiempo-seccion">
+                    <span class="valor" id="minutos">--</span>
+                    <span class="etiqueta">Min</span>
+                </div>
+                <div class="tiempo-seccion">
+                    <span class="valor" id="segundos">--</span>
+                    <span class="etiqueta">Seg</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

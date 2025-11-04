@@ -1,0 +1,131 @@
+:root {
+  --color-verde: #2ecc71;
+  --color-amarillo: #f1c40f;
+  --color-rojo: #e74c3c;
+  --color-claro-fondo: #fefefe;
+  --color-claro-texto: #222;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.8s, color 0.8s;
+  background-color: var(--color-claro-fondo);
+  color: var(--color-claro-texto);
+}
+
+body.verde {
+  background-color: var(--color-verde);
+}
+
+body.amarillo {
+  background-color: var(--color-amarillo);
+}
+
+body.rojo {
+  background-color: var(--color-rojo);
+}
+
+.container {
+  max-width: 440px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Inputs más juntos */
+.campo-label {
+  display: block;
+  margin-top: 0.6rem;
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  padding: 4px 6px;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="datetime-local"]:focus {
+  box-shadow: 0 0 5px 2px #2ecc71;
+  outline: none;
+}
+
+/* Recuadro principal SIEMPRE negro */
+#contenidoPrincipal {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #111;
+  color: var(--color-verde);
+  /* El color de texto se ajusta por JS */
+}
+
+/* Más grande y espacio */
+#tituloHeader {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  color: inherit;
+}
+
+#mensaje {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+#nombreSpan {
+  font-weight: 900;
+  color: inherit;
+}
+
+#contador {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  gap: 24px;
+  /* Más espacio entre cada sección */
+}
+
+.tiempo-seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 68px;
+}
+
+.valor {
+  font-size: 3.4rem;
+  font-weight: 800;
+  transition: transform 0.3s ease;
+  color: inherit;
+  margin-bottom: 0.6rem;
+}
+
+.etiqueta {
+  font-size: 1.15rem;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: inherit;
+}
+
+/* Animación pequeña al cambiar valor */
+.valor.animar {
+  transform: translateY(-10px);
+  color: inherit;
+}
