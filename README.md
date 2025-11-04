@@ -38,8 +38,6 @@ Este proyecto se publica bajo la licencia MIT. Puedes modificarlo y usarlo libre
 
 ## 🤝 Autor
 
-Desarrollado por [Tu Nombre o Nick] — 2025
+Desarrollado por JaimeOlucha — 2025
 
 ---
-
-¡Personalízalo como quieras y comparte tu propio enlace en minutos!
