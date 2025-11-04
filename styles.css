@@ -34,7 +34,7 @@ body.rojo {
   padding: 0 0.5rem;
 }
 
-/* Inputs más juntos */
+/* Inputs */
 .campo-label {
   display: block;
   margin-top: 0.6rem;
@@ -62,18 +62,20 @@ input[type="datetime-local"]:focus {
   outline: none;
 }
 
-/* Recuadro principal SIEMPRE negro */
+/* Recuadro principal SIEMPRE negro y responsive */
 #contenidoPrincipal {
   margin: 2.1rem auto 0 auto;
   padding: 2rem 1.5rem;
   border-radius: 18px;
   background-color: #111;
   color: var(--color-verde);
-  max-width: 100%;
+  max-width: 360px;
   width: 100%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
+/* Contenidos grandes y legibles */
 #tituloHeader {
   font-size: 2.1rem;
   font-weight: 700;
@@ -94,42 +96,57 @@ input[type="datetime-local"]:focus {
   color: inherit;
 }
 
+/* Contador centrado, espacio equilibrado */
 #contador {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  gap: 14px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 12px;
+  max-width: 320px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tiempo-seccion {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 60px;
+  min-width: 54px;
+  max-width: 72px;
+  box-sizing: border-box;
+}
+
+.valor,
+.etiqueta {
+  color: inherit;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .valor {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 800;
   transition: transform 0.3s ease;
-  color: inherit;
   margin-bottom: 0.45rem;
-  word-break: keep-all;
+  max-width: 100%;
 }
 
+/* Animación pequeña al cambiar valor */
+.valor.animar {
+  transform: translateY(-10px);
+  color: inherit;
+}
+
+/* Etiquetas del contador */
 .etiqueta {
   font-size: 1.08rem;
   margin-top: 0.18rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.11em;
-  color: inherit;
-}
-
-/* Animación pequeña al cambiar valor */
-.valor.animar {
-  transform: translateY(-10px);
   color: inherit;
 }
 
@@ -144,54 +161,83 @@ input[type="datetime-local"]:focus {
     padding: 0 0.1rem;
   }
 
+  /* Inputs más pequeños */
+  .campo-label {
+    font-size: 0.85rem;
+    margin-top: 0.32rem;
+    margin-bottom: 0.03rem;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"] {
+    font-size: 0.92rem;
+    max-width: 210px;
+    padding: 3px 3px;
+    margin-bottom: 0.21rem;
+  }
+
   #contenidoPrincipal {
-    padding: 1.1rem 0.3rem 1.5rem 0.3rem;
-    border-radius: 13px;
-    max-width: 100vw;
-    min-width: 0;
+    padding: 1rem 0.3rem 1rem 0.3rem;
+    border-radius: 14px;
+    max-width: 70vw;
   }
 
   #tituloHeader {
     font-size: 1.3rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.6rem;
   }
 
   #mensaje {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
   }
 
   #contador {
-    gap: 4vw;
-    justify-content: space-around;
+    max-width: 95vw;
+    gap: 6px;
   }
 
   .tiempo-seccion {
-    min-width: 45px;
+    min-width: 38px;
   }
 
   .valor {
-    font-size: 2rem;
-    margin-bottom: 0.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.13rem;
   }
 
   .etiqueta {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
-/* Responsive para pantallas muy pequeñas <= 400px */
-@media (max-width: 400px) {
+/* Muy estrechos <= 420px */
+@media (max-width: 420px) {
   #contenidoPrincipal {
-    padding: 0.7rem 0.1rem 1.0rem 0.1rem;
-    border-radius: 8px;
+    padding: 0.8rem 0.05rem 0.6rem 0.05rem;
+    border-radius: 9px;
+  }
+
+  #contador {
+    gap: 3px;
+    max-width: 99vw;
+  }
+
+  .campo-label {
+    font-size: 0.78rem;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"] {
+    font-size: 0.83rem;
+    max-width: 140px;
   }
 
   .valor {
-    font-size: 1.15rem;
+    font-size: 1.08rem;
   }
 
   .etiqueta {
-    font-size: 0.77rem;
+    font-size: 0.7rem;
   }
 }
